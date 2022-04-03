@@ -1,0 +1,58 @@
+/* ===== Colors ===== */
+/* ====== Transition ====== */
+main {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(45deg, #006494 0 50%, #247BA0 50% 100%);
+}
+
+.container-l, .container-r {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-l form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  color: #fff;
+}
+.container-l form input {
+  width: 90%;
+  height: 25px;
+  background-color: #116f9a00;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.918);
+  font-size: 15px;
+  outline: 0;
+}
+.container-l form input:focus {
+  outline: none !important;
+}
+.container-l form button {
+  width: 90%;
+  height: 40px;
+  background-color: #13293D;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 700px;
+}
+.container-l form button:hover {
+  background-color: #13293dc9;
+}
+
+.container-r h1 {
+  font-size: 42px;
+  color: #000;
+}
+.container-r img {
+  width: 300px;
+}

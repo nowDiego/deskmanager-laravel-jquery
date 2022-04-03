@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "./variable.scss";
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;    
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    min-height: 100vh;  
+    transition: $tran-05;
+}
+
+table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 15px;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+ th, td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+ tbody tr:last-of-type {
+    border-bottom: 2px solid $color-primary;
+}
+
+tbody tr.active-row {
+    font-weight: bold;
+    color: $color-secundary-light;
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    background-color: $color-secundary;
+    color: $color-white;
+    padding: 4px 3px;
+    border: none;
+    font-size:18px;
+    font-weight: 700px;
+
+    &:hover{
+        background-color: $color-secundary-light;
+    }
+}
+
+fieldset{
+    border: 0;
+}
+
+.container{
+    width: 50%;
+}
+
+.container-h{    
+    display: flex;
+   
+    
+}
+
+.container-v{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.container-h.center{
+    justify-content: center;
+   
+}
+
+.container-v.center{
+    align-items: center;
+   
+}
+
+.box{
+    margin: 5px 0px;
+    padding:5px;
+    // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+
+
+.pl-1{
+padding-left:10px ;
+}
+
+.pt-1{
+    padding-top:10px ;
+}
+
+.mt-1{
+    margin-top: 5px;
+}
+
+.mt-2{
+    margin-top: 10px;
+}
+
+
+.m-1{
+    margin: 5px;
+}
+
+.w-1{
+    width: 50%;
+    }
+
+.w-2{
+    width: 80%;
+    }  
+    
+.w-3{
+   width: 95%;
+   } 
+
+.row{
+    display: flex;
+    margin: 3px 0px;
+}
+
+.card{
+    border-bottom: 1px solid #13293d9c;
+    padding-bottom: 1px;
+}
+
+
+.btn.mid {  
+        background:linear-gradient(to bottom, $color-secundary 5%, $color-secundary 100%);
+        background-color:$color-secundary;
+        border-radius:6px;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:6px 24px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px $color-secundary-light;
+    }
+    .btn.mid:hover {
+        background:linear-gradient(to bottom, $color-secundary-light 5%, $color-secundary-light 100%);
+        background-color:$color-secundary-light;
+    }
+    .btn.mid:active {
+        position:relative;
+        top:1px;
+    }
+
+.row label{
+    width:18%;
+    text-align: end;
+    color: $color-secundary;
+}
+.row input{
+        margin-left: 5px;
+        width: 82%;
+        border: 1px solid #d8d5d5;
+    }
+
+.color-s label {
+    color: $color-secundary;
+    }
+.color-s{
+    color: $color-secundary;
+}
+
+
+.flex-v{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.error-form{
+    font-size: 13px;
+    color: red;
+}
+
+
+.dashboard-s{
+    display: grid;
+grid-template-columns: 35vw 35vw ;
+grid-template-rows: auto auto;
+ grid-gap: 30px 5px; 
+
+
+ grid-template-areas:
+   "calledcount graph "
+   "called report "
+   ;
+}
+
+.latest-called{ 
+    height: 250px;
+    grid-area:called;
+
+   
+}
+
+.report{
+   
+    height: 250px;
+    grid-area:report;
+}
+
+.graph{
+      
+    grid-area:graph;
+    margin-bottom:10px ;
+}
+
+.count-called{
+    grid-area:calledcount;
+    display: flex; 
+    margin-bottom:10px ;
+
+    div{
+        padding: 10px;       
+        background-color: #c4d6d3;
+        
+        h2{
+         font-size: 85px;
+        }
+        h4{
+            font-size: 25px;
+        }
+    }
+}
+
+.dashboard-c{
+    display: flex;    
+
+
+    .content-dashboard-c{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+
+      .content-dashboard-c-top{
+        display: flex;
+       
+        a{
+            text-decoration: none;
+
+        }
+
+
+        .content-dashboard-c-profile{
+            width: 300px;
+            height: 250px;
+            background-color: $color-secundary;
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: $color-white;
+            cursor: pointer;
+
+            &:hover{
+                background-color: $color-secundary-light;
+            }
+
+            i{
+                font-size: 200px;
+            }
+       
+        }
+        .content-dashboard-c-called{
+
+            width: 300px;
+            height: 250px;
+            background-color: $color-secundary;
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+             color:  $color-white;
+             cursor: pointer;
+         
+            &:hover{
+                background-color: $color-secundary-light;
+            }
+
+            i{
+                font-size: 200px;
+            }
+        }
+      
+    }
+      .content-dashboard-c-bottom{
+        width: 30px;
+       }
+    }
+
+    .image-dashbord-c{
+        width: 50%;  
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        img{
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+
+.btn-trash{    
+cursor: pointer;
+}
+
+.pagination{
+display: flex;
+justify-content: center;
+padding: 10px;
+}
+
+.page-item.active .page-link, 
+.pagination-datatables li.active .page-link, 
+.pagination li.active .page-link, 
+**.pagination li.active span,** --Added line
+.page-item.active .pagination-datatables li a, 
+.pagination-datatables li .page-item.active a, 
+.pagination-datatables li.active a, 
+.page-item.active .pagination li a, 
+.pagination li .page-item.active a, 
+.pagination li.active a {
+    z-index: 2;
+   color: #fff;
+   background-color: #20a8d8;
+   border-color: #20a8d8; 
+}
+
+.page-link, .pagination-datatables li a, .pagination li a, .pagination span {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #20a8d8;
+    background-color: #fff;
+    border: 1px solid #ddd; }
+
+    
+
+#form-submit-customer,#form-submit-support{
+    input{
+        border: 0;
+    border-bottom: solid 1px;
+    }
+
+}
+    
